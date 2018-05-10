@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + "px"
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="swiper/swiper.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <span>北京</span>
+            <span>假日旅行</span>
+            <span></span>
+        </header>
+        <div class="banner swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide"><img src="img/10.jpg"></li>
+                <li class="swiper-slide"><img src="img/9.jpg"></li>
+                <li class="swiper-slide"><img src="img/8.jpg"></li>
+            </ul>
+            <div class="swiper-scrollbar" id="scroll"></div>
+
+        </div>
+        <main class="main">
+            <dl>
+                <dt><img src="img/9.jpg" alt=""></dt>
+                <dd>
+                    <h1>北京首都机场国际酒店</h1>
+                    <p><span class="good">限时抢购</span><span><b class="price">￥268</b>起</span></p>
+                    <h2>4.3分 四星级 wifi p</h2>
+                    <p><span>首都国际、新国展</span><span>23.2公里</span> </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/10.jpg" alt=""></dt>
+                <dd>
+                    <h1>北京首都机场国际酒店</h1>
+                    <p><span class="good">限时抢购</span><span><b class="price">￥268</b>起</span></p>
+                    <h2>4.3分 四星级 wifi p</h2>
+                    <p><span>首都国际、新国展</span><span>23.2公里</span> </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/8.jpg" alt=""></dt>
+                <dd>
+                    <h1>北京首都机场国际酒店</h1>
+                    <p><span class="good">限时抢购</span><span><b class="price">￥268</b>起</span></p>
+                    <h2>4.3分 四星级 wifi p</h2>
+                    <p><span>首都国际、新国展</span><span>23.2公里</span> </p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/9.jpg" alt=""></dt>
+                <dd>
+                    <h1>北京首都机场国际酒店</h1>
+                    <p><span class="good">限时抢购</span><span><b class="price">￥268</b>起</span></p>
+                    <h2>4.3分 四星级 wifi p</h2>
+                    <p><span>首都国际、新国展</span><span>23.2公里</span> </p>
+                </dd>
+            </dl>
+        </main>
+    </div>
+    <script src="swiper/swiper.min.js"></script>
+    <script>
+        new Swiper(".banner", {
+            scrollbar: {
+                el: ".swiper-scrollbar",
+
+            }
+        })
+    </script>
+</body>
+
+</html>
