@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="swiper-4.1.6.min.css">
+    <script src="flexible.js"></script>
+    <script src="swiper-4.1.6.min.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <span>北京</span>
+            <span>假日旅行</span>
+        </header>
+        <section class="section">
+            <div class="lunbo">
+                <div class="swiper-container banner">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/2.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/3.jpg" alt=""></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="lb">
+                <p id="active"></p>
+                <p id="ac"></p>
+                <p id="ac"></p>
+            </div>
+            <div class="big">
+                <div class="small">
+                    <dl>
+                        <dt><img src="img/4.jpg" alt=""></dt>
+                        <dd>
+                            <p class="op">北京首都国际机场</p>
+                            <span>限时抢购</span>
+                            <p class="op1"><b>￥268</b>起</p>
+                            <p class="op2">4.3分 四星级 <img src="img/6.png" alt=""></p>
+                            <p><img src="img/7.png" alt="">首都机场、新国展</p>
+                            <p class="op3">23.2公里</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="img/4.jpg" alt=""></dt>
+                        <dd>
+                            <p class="op">北京首都国际机场</p>
+                            <span>限时抢购</span>
+                            <p class="op1"><b>￥268</b>起</p>
+                            <p class="op2">4.3分 四星级 <img src="img/6.png" alt=""></p>
+                            <p><img src="img/7.png" alt="">首都机场、新国展</p>
+                            <p class="op3">23.2公里</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="img/4.jpg" alt=""></dt>
+                        <dd>
+                            <p class="op">北京首都国际机场</p>
+                            <span>限时抢购</span>
+                            <p class="op1"><b>￥268</b>起</p>
+                            <p class="op2">4.3分 四星级 <img src="img/6.png" alt=""></p>
+                            <p><img src="img/7.png" alt="">首都机场、新国展</p>
+                            <p class="op3">23.2公里</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="img/4.jpg" alt=""></dt>
+                        <dd>
+                            <p class="op">北京首都国际机场</p>
+                            <span>限时抢购</span>
+                            <p class="op1"><b>￥268</b>起</p>
+                            <p class="op2">4.3分 四星级 <img src="img/6.png" alt=""></p>
+                            <p><img src="img/7.png" alt="">首都机场、新国展</p>
+                            <p class="op3">23.2公里</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="img/4.jpg" alt=""></dt>
+                        <dd>
+                            <p class="op">北京首都国际机场</p>
+                            <span>限时抢购</span>
+                            <p class="op1"><b>￥268</b>起</p>
+                            <p class="op2">4.3分 四星级 <img src="img/6.png" alt=""></p>
+                            <p><img src="img/7.png" alt="">首都机场、新国展</p>
+                            <p class="op3">23.2公里</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
+        <footer></footer>
+    </div>
+</body>
+<script>
+    var myswiper = new Swiper('.banner', {
+        onSlideChangeStart: function(swiper) {
+            var a = swiper.activeIndex;
+            $('.lb').children('p').eq(a).attr('id', 'active').siblings().attr('id', 'ac');
+        }
+    });
+    $('.lb').children('p').click(function() {
+        var ind = $(this).index();
+        myswiper.slideTo(ind)
+        $(this).attr('id', 'active').siblings().attr('id', 'ac')
+    })
+</script>
+
+</html>

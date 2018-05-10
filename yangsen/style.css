@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 1rem;
+    width: 100%;
+    background: #46d264;
+    line-height: 0.85rem;
+    text-align: center;
+}
+
+.header span {
+    color: #fff;
+}
+
+.header span:first-child {
+    float: left;
+    margin-left: 0.2rem;
+}
+
+.header span:last-child {
+    font-size: 0.6rem;
+}
+
+.section {
+    width: 100%;
+    flex: 1;
+}
+
+.lunbo {
+    width: 100%;
+    height: 4rem;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.lb {
+    height: 0.3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.lb p {
+    width: 33.333%;
+    height: 100%;
+    background: #ccc;
+}
+
+#active {
+    background: #46d264;
+}
+
+#ac {
+    background: #ccc;
+}
+
+.big {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.small {
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.small dl {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+}
+
+.small dl dt {
+    width: 30%;
+    height: 2rem;
+}
+
+.small dl dt img {
+    width: 100%;
+    height: 100%;
+    margin-top: 0.2rem;
+}
+
+.small dl dd {
+    width: 65%;
+    height: 100%;
+    margin-left: 0.2rem;
+    position: relative;
+}
+
+.small dl dd .op {
+    font-size: 0.6rem;
+}
+
+.small dl dd span {
+    display: block;
+    width: 1.5rem;
+    height: 0.6rem;
+    background: orange;
+    color: #fff;
+    text-align: center;
+    line-height: 0.6rem;
+}
+
+.op1 {
+    position: absolute;
+    right: 5px;
+    top: 60px;
+}
+
+.op1 b {
+    color: orange;
+    font-size: 0.4rem;
+}
+
+.op3 {
+    position: absolute;
+    right: 5px;
+    top: 120px;
+}
