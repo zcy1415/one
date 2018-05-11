@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="身份证号" class="text">
+    <button class="btn"> btn</button>
+    <div class="box"></div>
+</body>
+<script>
+    var text = document.querySelector(".text")
+    var btn = document.querySelector(".btn")
+    var box = document.querySelector(".box")
+
+    var reg = /^[0-9]{18}$/
+    btn.addEventListener("click", function() {
+        var num = text.value
+        console.log(reg.test(num))
+        if (reg.test(num)) {
+            var arr = `<p>${num.substr(0, 14)}<b>${num.substr(10, 4)}</b><span>****</span></p>`
+            box.innerHTML = arr
+        }
+    })
+</script>
+
+</html>
