@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-4.1.6.min.css">
+    <script src="js/flexible.js"></script>
+    <script src="js/swiper-4.1.6.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <p><img src="img/2.png" alt=""></p>
+            <p class="op"><span id="active">大盘排片</span><span>城市排片</span></p>
+            <p><img src="img/1.png" alt=""></p>
+        </header>
+        <section class="section">
+            <div class="swiper-contaicon banner">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="one">
+                            <span>前一天</span>
+                            <span>2018年5月11日</span>
+                            <span>后一天</span>
+                        </div>
+                        <div class="two">
+                            <span>全国</span>
+                            <span>全时段</span>
+                            <span>场次</span>
+                        </div>
+                        <div class="there">
+                            <canvas width="300px" height="300px"></canvas>
+                        </div>
+                        <div class="four">
+                            <span>影片</span>
+                            <span>场次占比</span>
+                            <span>场次</span>
+                            <span>票房(万)</span>
+                        </div>
+                        <div class="five">
+                            <span><b>雷神三:诸神黄昏</b>
+                                  <span id="ospan" style="position: absolute;
+                                  left: 0;
+                                  top: 30px;
+                                  font-size: 0.28rem;">上映6天:4.45亿</span>
+                            </span>
+                            <span>43.2%</span>
+                            <span>103,489</span>
+                            <span>1102.34</span>
+                        </div>
+                        <div class="five">
+                            <span><b>雷神三:诸神黄昏</b>
+                                      <span id="ospan" style="position: absolute;
+                                      left: 0;
+                                      top: 30px;
+                                      font-size: 0.28rem;">上映6天:4.45亿</span>
+                            </span>
+                            <span>43.2%</span>
+                            <span>103,489</span>
+                            <span>1102.34</span>
+                        </div>
+                        <div class="five">
+                            <span><b>雷神三:诸神黄昏</b>
+                                          <span id="ospan" style="position: absolute;
+                                          left: 0;
+                                          top: 30px;
+                                          font-size: 0.28rem;">上映6天:4.45亿</span>
+                            </span>
+                            <span>43.2%</span>
+                            <span>103,489</span>
+                            <span>1102.34</span>
+                        </div>
+                        <div class="five">
+                            <span><b>雷神三:诸神黄昏</b>
+                                              <span id="ospan" style="position: absolute;
+                                              left: 0;
+                                              top: 30px;
+                                              font-size: 0.28rem;">上映6天:4.45亿</span>
+                            </span>
+                            <span>43.2%</span>
+                            <span>103,489</span>
+                            <span>1102.34</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">2</div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+<script>
+    var aswiper = new Swiper('.banner');
+    $('.op').children('span').click(function() {
+        var ind = $(this).index()
+        aswiper.slideTo(ind);
+        $(this).attr('id', 'active').siblings().attr('id', 'avq');
+    })
+    var ctx = document.querySelector("canvas").getContext("2d")
+    var deg = Math.PI / 180;
+
+    var data = [{
+        value: 30,
+        color: "red"
+    }, {
+        value: 60,
+        color: "blue"
+    }, {
+        value: 90,
+        color: "yellow"
+    }, {
+        value: 45,
+        color: "skyblue"
+    }, {
+        value: 35,
+        color: "orange"
+    }, {
+        value: 100,
+        color: "brown"
+    }]
+    ctx.translate(150, 150);
+    var sum = -90;
+    data.map(function(v) {
+        ctx.beginPath();
+        var end = v.value + sum;
+        ctx.lineWidth = 30;
+        ctx.strokeStyle = v.color;
+        ctx.arc(0, 0, 125, sum * deg, end * deg)
+        ctx.stroke()
+        sum = end;
+    })
+    ctx.beginPath();
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle"
+    ctx.font = "40px border"
+    ctx.fillStyle = "skyblue"
+    ctx.fillText("43.10%", 0, -25)
+    ctx.fillText("诸神的黄昏", 0, 25)
+</script>
+
+</html>
